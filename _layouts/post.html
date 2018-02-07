@@ -6,9 +6,12 @@ layout: default
   {{ page.title }}
 </h1>
 
+<figure>
 {% if page.image %}
-  <img src="{{ site.github.url }}/assets/img/{{ page.image }}">
+  <img src="{{ site.github.url }}/assets/img/{{ page.image }}" alt="{{ page.caption }}">
 {% endif %}
+  <figcaption>{{ page.caption }}</figcaption>
+</figure>
 
 {{ content }}
 
