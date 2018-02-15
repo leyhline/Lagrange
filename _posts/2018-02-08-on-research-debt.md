@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "On Research Dept – Project Outline"
+title: "On Research Dept… and project outline"
 author: "Thomas Leyh"
 categories: journal
 tags: [documentation,sample]
