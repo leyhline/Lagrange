@@ -6,7 +6,7 @@ menu:
 social:
 - {icon: 'github', link: 'https://www.github.com/leyhline'}
 - {icon: 'twitter', link: 'https://twitter.com/leyhline'}
-- {icon: 'rss-square', link: 'feed.xml'}
+- {icon: 'rss-square', link: '/feed.xml'}
 
 # Customize site text
 pagination:
