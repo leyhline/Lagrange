@@ -25,7 +25,7 @@ And this first blog post might be *sufficiently good* in motivating me to contin
 ### Afterword: A more extrinsic perspective
 
 <figure>
-  <img src="/assets/img/iq_distribution.svg" alt="IQ distribution" width="80%">
+  <img src="/assets/img/iq_distribution.svg" alt="IQ distribution" style="width:80%;">
   <figcaption>Normalized distribution of IQ by <a href="https://commons.wikimedia.org/wiki/User:Dmcq">Dmcq</a> from <a href="https://commons.wikimedia.org/wiki/File:IQ_distribution.svg">Wikimedia Commons</a></figcaption>
 </figure>
 
