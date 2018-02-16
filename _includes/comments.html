@@ -1,7 +1,36 @@
-<form method="POST" action="https://api.staticman.net/v2/entry/leyhline/leyhline.github.io/master/comments">
+{% for comment in site.data.comments[page.slug] | where_exp:"item" %}
+<div class="comment">
+    <span class="comment-name">
+        {% if comment[1].name %}
+            {% assign name = comment[1].name %}
+        {% else %}
+            {% assign name = "Anonymous" %}
+        {% endif %}
+        {% if comment[1].url %}
+            <a href="{{ comment[1].url }}" target="_blank">{{ name }}</a>
+        {% else %}
+            {{ name }}
+        {% endif %} wrote:
+    </span>
+    <span class="comment-date">
+        {% assign d = comment[1].date | date: "%-d"  %}
+        {{ comment[1].date | date: "%B" }}
+        {% case d %}
+          {% when '1' or '21' or '31' %}{{ d }}st
+          {% when '2' or '22' %}{{ d }}nd
+          {% when '3' or '23' %}{{ d }}rd
+          {% else %}{{ d }}th{% endcase %},
+        {{ comment[1].date | date: "%Y" }}
+    </span>
+    <p>{{ comment[1].message | smartify }}</p>
+</div>
+{% endfor %}
+
+<form class="comment" method="POST" action="https://api.staticman.net/v2/entry/leyhline/leyhline.github.io/master/comments">
+    <input name="options[redirect]" type="hidden" value="{{ site.github.url }}/menu/writing.html">
     <input name="options[slug]" type="hidden" value="{{ page.slug }}">
-    <label><input name="fields[name]" type="text">Name  (optional)</label><br>
-    <label><input name="fields[url]" type="email">E-mail (optional)</label><br>
-    <label><textarea name="fields[message]"></textarea>Message</label><br>
-    <button type="submit">Submit!</button>
+    <input name="fields[name]" type="text" placeholder="Name (optional)">
+    <input name="fields[url]" type="url" placeholder="Website (optional)">
+    <textarea name="fields[message]" placeholder="Please leave a comment…" required></textarea>
+    <button type="submit">Submit Comment</button>
 </form>

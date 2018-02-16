@@ -11,6 +11,8 @@
     Code
     Tables
     Social media icons
+    Buttons
+    Forms
 */
 
 /*
@@ -555,10 +557,90 @@ Buttons
 
 .toggle {
   background-color: #f5f5f5;
-  border: 2px solid #ADD8E6; /* Green */
+  border: 2px solid #ADD8E6;
   text-align: center;
   display: inline-block;
   border-radius: 3px;
   font-family: "Source Code Pro", monospace;
-  padding: 0px 20px;
+  padding: 3px 20px;
+}
+
+/*
+Forms
+*/
+
+.comment input {
+  width: 283px;
+  font-family: "PT Serif", Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  border: 1px solid #999;
+  padding: 5px 9px;
+  color: #515151;
+}
+
+.comment textarea {
+  width: 590px;
+  height: 4.75rem;
+  padding: 9px;
+  font-family: "PT Serif", Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  margin: 3px 0px;
+  border: 1px solid #999;
+  color: #515151;
+}
+
+@media (max-width: 768px) {
+  .comment input {
+    max-width: 90%;
+    font-size: 14px;
+  }
+
+  .comment textarea {
+    max-width: 90%;
+    font-size: 14px;
+  }
+}
+
+.comment button {
+  font-family: "Quattrocento Sans", sans-serif;
+  background-color: transparent;
+  border: 2px solid #515151;
+  text-align: center;
+  display: inline-block;
+  border-radius: 3px;
+  padding: 5px 20px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #515151;
+}
+
+/*
+Comments
+*/
+
+.comment {
+  padding: 1rem 0;
+}
+
+.comment p {
+  margin: 0;
+  text-indent: 1rem;
+}
+
+.comment-name {
+  padding-left: 1rem; 
+  font-weight: bold;
+  font-family: "Quattrocento Sans", sans-serif;
+}
+
+.comment-date {
+  font-size: 16px;
+  font-family: "Quattrocento Sans", sans-serif;
+  float: right;
+}
+
+@media (max-width: 30rem) {
+  .comment-date {
+    font-size: 12px;
 }
