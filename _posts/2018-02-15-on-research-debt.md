@@ -20,7 +20,7 @@ Unfortunately, there's a catch (as always). Clear writing is a skill that takes 
 
 Isn't it okay this way? I like writing as much as maths and programming. Sure, I'll never be a genius this way. I'll never be a unit vector, following a single goal with all I have. But I might become *sufficiently good* to get something useful out of my efforts regardless.
 
-And this first blog post might be *sufficiently good* in motivating me to continue. To continue with my “research” and to continue writing down my insights to the best of my ability.
+And this first blog post might be *sufficiently good* in motivating me to continue. To continue with my "research" and to continue writing down my insights to the best of my ability.
 
 ### Afterword: A more extrinsic perspective
 
@@ -29,6 +29,6 @@ And this first blog post might be *sufficiently good* in motivating me to contin
   <figcaption>Normalized distribution of IQ by <a href="https://commons.wikimedia.org/wiki/User:Dmcq">Dmcq</a> from <a href="https://commons.wikimedia.org/wiki/File:IQ_distribution.svg">Wikimedia Commons</a></figcaption>
 </figure>
 
-You thought all this wise and insightful jabbering is enough for me? You thought wrong! In finance it's never good to put all your money in a single investment. And I won't do the same here! As you can see only a small fraction of the population has sufficient intelligence (even though IQ is a rather questionable metric) to be classified as “genius”. And even many intelligent people lack a goal which is – in my opinion – also necessary to get this title. As for the remains: their interests might often lie elsewhere.
+You thought all this wise and insightful jabbering is enough for me? You thought wrong! In finance it's never good to put all your money in a single investment. And I won't do the same here! As you can see only a small fraction of the population has sufficient intelligence (even though IQ is a rather questionable metric) to be classified as "genius". And even many intelligent people lack a goal which is – in my opinion – also necessary to get this title. As for the remains: their interests might often lie elsewhere.
 
 Conclusion: Statistically there is a good chance to find a niche where I can shine. It just has to be stupid enough.

@@ -9,7 +9,7 @@
     {% include header.html %}
 
     <div class="post-container">
-      {{ content }}
+      {{ content | smartify }}
     </div>
 
     {% include footer.html %}
