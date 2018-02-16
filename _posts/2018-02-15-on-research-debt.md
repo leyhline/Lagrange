@@ -27,6 +27,40 @@ Isn't it okay this way? I like writing as much as maths and programming. Sure, I
   Conclusion: This is a rather stupid model for measuring interest, isn't it?</figcaption>
 </figure>
 
+<button onclick="toggleCode(0)" class="toggle">Show Code</button>
+
+```python
+import matplotlib.pyplot as plt
+
+f, ax = plt.subplots()
+
+# Preparing the plot
+ax.set_xlim(0, 1)
+ax.set_ylim(0, 1)
+ax.set_aspect("equal")
+ax.spines["top"].set_visible(False)
+ax.spines["right"].set_visible(False)
+ax.set_xticks([0, 1])
+ax.set_yticks([0, 1])
+ax.set_xticklabels([0, 1])
+ax.set_yticklabels(["", 1])
+ax.set_xlabel("studying")
+ax.set_ylabel("playing video games")
+
+# Placing the data on the plot (with labels)
+ax.arrow(0, 0, 1, 0, fc='r', ec='r', lw=2, head_width=0.025,
+         head_length=0.05, length_includes_head=True, clip_on=False)
+ax.text(0.3, 0.015, "Some clichéd Chinese", color="r")
+ax.arrow(0, 0, 0.31, 0.95, fc='b', ec='b', lw=2, head_width=0.025,
+         head_length=0.05, length_includes_head=True, clip_on=False)
+ax.text(0.08, 0.7, "The notorious “friend of mine”",
+        color="b", rotation="72")
+
+#plt.savefig("interest_vector_2d.svg",
+#            bbox_inches="tight", transparent=True)
+plt.show()
+```
+
 And this first blog post might be *sufficiently good* in motivating me to continue. To continue with my "research" and to continue writing down my insights to the best of my ability.
 
 ### Afterword: A more extrinsic perspective
