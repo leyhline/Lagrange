@@ -68,9 +68,15 @@ figure {
   padding: 0;
 }
 
+figure img {
+  display: block;
+  margin: auto;
+}
+
 figcaption {
   margin: 0 1em;
   font-size: 14px;
+  text-align: center;
 }
 
 @media (max-width: 30em) {
@@ -79,20 +85,20 @@ figcaption {
   }
 }
 
-img.avatar {
+figure.avatar {
+  float: right;
+}
+
+figure.avatar img {
   border-radius: 50%;
   height: 150px;
   width: 150px;
   display: block;
 }
 
-figcaption.avatar {
+figure.avatar figcaption {
   text-align: center;
   font-size: 10px;
-}
-
-figure.avatar {
-  float: right;
 }
 
 blockquote {

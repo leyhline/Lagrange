@@ -4,8 +4,8 @@ title: About
 ---
 
 <figure class="avatar">
-    <img class="avatar" src="/assets/img/avatar.jpg" alt="That's me! Almost…">
-    <figcaption class="avatar"><a href="http://make.girls.moe/">make.girls.moe</a></figcaption>
+    <img src="/assets/img/avatar.jpg" alt="That's me! Almost…">
+    <figcaption><a href="http://make.girls.moe/" target="_blank">make.girls.moe</a></figcaption>
 </figure>
 
 Hi, I'm Thomas and I like to play around with computers. When I was younger I also wanted to be a mad scientist. (In my imagination this was someone who lumps some chemicals together until everything explodes.) Unfortunately, I never really got into this chemistry stuff. 
