@@ -27,7 +27,7 @@
 {% endfor %}
 
 <form class="comment" method="POST" action="https://api.staticman.net/v2/entry/leyhline/leyhline.github.io/master/comments">
-    <input name="options[redirect]" type="hidden" value="{{ site.github.url }}/menu/writing.html">
+    <input name="options[redirect]" type="hidden" value="{{ site.github.url }}/submitted.html">
     <input name="options[slug]" type="hidden" value="{{ page.slug }}">
     <input name="fields[name]" type="text" placeholder="Name (optional)">
     <input name="fields[url]" type="url" placeholder="Website (optional)">
