@@ -4,7 +4,8 @@
     {% if name == "Thomas Leyh" %}
         {% assign avatar = "/assets/img/avatar.jpg" %}
     {% else %}
-        {% assign avatar = "/assets/avatar/" | append: name | downcase | append: ".jpg" %}
+        {% assign avatar_name = name | downcase | cgi_escape %}
+        {% assign avatar = "/assets/avatar/" | append: avatar_name | append: ".jpg" %}
     {% endif %}
     <img src="{{ avatar }}" alt="{{ name }}" onerror="this.onerror=null;this.src='/assets/img/noavatar.jpg';">
     <span class="comment-name">
