@@ -623,6 +623,13 @@ Comments
   padding: 1rem 0;
 }
 
+.comment img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  float: left;
+}
+
 .comment p {
   margin: 0;
   text-indent: 1rem;
@@ -643,5 +650,10 @@ Comments
 @media (max-width: 30rem) {
   .comment-date {
     font-size: 12px;
+  }
+
+  .comment img {
+    width: 45px;
+    height: 45px;
   }
 }
