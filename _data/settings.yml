@@ -6,6 +6,8 @@ menu:
 social:
 - {icon: 'github', link: 'https://www.github.com/leyhline'}
 - {icon: 'twitter', link: 'https://twitter.com/leyhline'}
+- {icon: 'linkedin', link: 'http://www.linkedin.com/in/thomas-leyh'}
+- {icon: 'envelope', link: 'mailto:thomas.leyh@mailbox.org'}
 - {icon: 'rss-square', link: '/feed.xml'}
 
 # Customize site text
