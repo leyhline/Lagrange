@@ -1,11 +1,9 @@
 <div class="menu">
   <nav class="menu-content">
-    <a href="{% link about.md %}">About</a>
-    <a href="{% link archive.md %}">Archive</a>
+    <a href="{{ site.baseurl }}{% link about.md %}">About</a>
+    <a href="{{ site.baseurl }}{% link archive.md %}">Archive</a>
   </nav>
   <nav class="social-icons">
-    {% for item in site.data.settings.social %}
-      <a href="{{ item.link }}" target="_blank"><i class="fa fa-{{ item.icon }}" aria-hidden="true"></i></a>
-    {% endfor %}
+    {% include social-icons.html %}
   </nav>
 </div>

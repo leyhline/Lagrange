@@ -7,10 +7,10 @@
         {% assign avatar_name = name | slugify %}
         {% assign avatar = "/assets/avatar/" | append: avatar_name | append: ".jpg" %}
     {% endif %}
-    <img src="{{ avatar }}" alt="{{ name }}" onerror="this.onerror=null;this.src='/assets/img/noavatar.jpg';">
+    <img src="{{ avatar | relative_url }}" alt="{{ name }}" onerror="this.onerror=null;this.src='{{ "/assets/img/noavatar.jpg" | relative_url }}';">
     <span class="comment-name">
         {% if comment[1].url %}
-            <a href="{{ comment[1].url }}" target="_blank">{{ name }}</a>
+            <a href="{{ comment[1].url | cgi_escape }}" target="_blank">{{ name }}</a>
         {% else %}
             {{ name }}
         {% endif %} wrote:
@@ -23,7 +23,7 @@
 {% endfor %}
 
 <form class="comment" method="POST" action="https://api.staticman.net/v2/entry/leyhline/leyhline.github.io/master/comments">
-    <input name="options[redirect]" type="hidden" value="{{ site.github.url }}/submitted.html">
+    <input name="options[redirect]" type="hidden" value="{{ site.url }}{{ site.baseurl }}{% link submitted.md %}">
     <input name="options[slug]" type="hidden" value="{{ page.slug }}">
     <input name="fields[name]" type="text" placeholder="Name (optional)">
     <input name="fields[url]" type="url" placeholder="Website (optional)">

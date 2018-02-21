@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Comment Submitted"
-permalink: /submitted.html
+permalink: submitted/
 ---
 
 # Comment Submitted

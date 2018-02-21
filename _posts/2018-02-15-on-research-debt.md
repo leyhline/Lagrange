@@ -18,7 +18,7 @@ Unfortunately, there's a catch (as always). Clear writing is a skill that takes 
 Isn't it okay this way? I like writing as much as maths and programming. Sure, I'll never be a genius this way. I'll never be a unit vector, following a single goal with all I have. But I might become *sufficiently good* to get something useful out of my efforts regardless.
 
 <figure>
-  <img src="/assets/img/interest_vector_2d.svg" alt="2D interest space" style="min-width:60%;">
+  <img src="{{ "/assets/img/interest_vector_2d.svg" | relative_url }}" alt="2D interest space" style="min-width:60%;">
   <figcaption>While the Chinese person (the <em>unit vector</em>) throws all time (and hopefully interest, too) into studying my friend wastes his time. Instead of doing useless schoolwork he should rather concentrate on video games. Could've become a pro gamer this way. Such a loser.<br>
   Although geometrically this plot is quite interesting: While my “friend” is at 0.95 with video games he still achieves 0.31 in studying. Taking the sum he's beating our Chinese strawman.<br>
   Conclusion: This is a rather stupid model for measuring interest, isn't it?</figcaption>
@@ -63,7 +63,7 @@ And this first blog post might be *sufficiently good* in motivating me to contin
 ### Afterword: A more extrinsic perspective
 
 <figure>
-  <img src="/assets/img/iq_distribution.svg" alt="IQ distribution" style="min-width:80%;">
+  <img src="{{ "/assets/img/iq_distribution.svg" | relative_url }}" alt="IQ distribution" style="min-width:80%;">
   <figcaption>Normalized distribution of IQ by <a href="https://commons.wikimedia.org/wiki/User:Dmcq">Dmcq</a> from <a href="https://commons.wikimedia.org/wiki/File:IQ_distribution.svg">Wikimedia Commons</a></figcaption>
 </figure>
 

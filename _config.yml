@@ -28,6 +28,7 @@ plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-t
 title:		           'Research Log'
 description:	       'pretending to be a scientist'
 author:              'Thomas Leyh'
+url:                 https://leyhline.github.io
 
 # Defaults
 
