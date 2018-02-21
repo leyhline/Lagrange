@@ -1,6 +1,6 @@
 # Global configuration
 
-exclude: [NOTES.md]
+exclude: [NOTES.md, Gemfile, Gemfile.lock, LICENSE.md, README.md]
 timezone: Europe/Berlin
 
 # Site Build Settings
