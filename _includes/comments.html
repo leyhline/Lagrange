@@ -4,7 +4,7 @@
     {% if name == "Thomas Leyh" %}
         {% assign avatar = "/assets/img/avatar.jpg" %}
     {% else %}
-        {% assign avatar_name = name | downcase | cgi_escape %}
+        {% assign avatar_name = name | slugify %}
         {% assign avatar = "/assets/avatar/" | append: avatar_name | append: ".jpg" %}
     {% endif %}
     <img src="{{ avatar }}" alt="{{ name }}" onerror="this.onerror=null;this.src='/assets/img/noavatar.jpg';">
@@ -16,14 +16,7 @@
         {% endif %} wrote:
     </span>
     <span class="comment-date">
-        {% assign d = comment[1].date | date: "%-d"  %}
-        {{ comment[1].date | date: "%B" }}
-        {% case d %}
-          {% when '1' or '21' or '31' %}{{ d }}st
-          {% when '2' or '22' %}{{ d }}nd
-          {% when '3' or '23' %}{{ d }}rd
-          {% else %}{{ d }}th{% endcase %},
-        {{ comment[1].date | date: "%Y" }}
+        {{ comment[1].date | date_to_string }}
     </span>
     <p>{{ comment[1].message | smartify }}</p>
 </div>
