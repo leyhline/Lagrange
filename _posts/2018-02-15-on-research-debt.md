@@ -1,8 +1,5 @@
 ---
-layout: post
 title: "On Research Debt… and why this blog exists"
-author: "Thomas Leyh"
-categories: journal
 tags: [machine learning, research]
 image: soap_bubbles.jpg
 caption: Soap Bubbles (ca. 1733–34) by Jean Siméon Chardin
