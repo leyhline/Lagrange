@@ -5,7 +5,7 @@ permalink: about/
 ---
 
 <figure class="avatar">
-    <img src="{{ "/assets/img/avatar.jpg" | relative_url }}" alt="That's me! Almost…">
+    <img src="{{ site.baseurl }}{% link /assets/img/avatar.jpg %}" alt="That's me! Almost…">
     <figcaption><a href="http://make.girls.moe/" target="_blank">make.girls.moe</a></figcaption>
 </figure>
 
@@ -14,7 +14,7 @@ Hi, I'm Thomas and I like to play around with computers. When I was younger I al
 Ultimately, what is left is my interest for electronics and mathematics but that should be sufficient for doing science, right? Right? Oh, I also like anime, video games and all this stuff but that should come to no surprise considering my generation. At least this is what I tell myself.
 
 <figure>
-    <img src="{{ "/assets/img/mannikin_in_the_snow.jpg" | relative_url }}" alt="Mannikin in the Snow (ca. 1891–93) by John Singer Sargent">
+    <img src="{{ site.baseurl }}{% link /assets/img/mannikin_in_the_snow.jpg %}" alt="Mannikin in the Snow (ca. 1891–93) by John Singer Sargent">
     <figcaption>Mannikin in the Snow (ca. 1891–93) by John Singer Sargent</figcaption>
 </figure>
 

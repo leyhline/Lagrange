@@ -9,8 +9,8 @@
     {% endif %}
     <img src="{{ avatar | relative_url }}" alt="{{ name }}" onerror="this.onerror=null;this.src='{{ "/assets/img/noavatar.jpg" | relative_url }}';">
     <span class="comment-name">
-        {% if comment[1].url %}
-            <a href="{{ comment[1].url | cgi_escape }}" target="_blank">{{ name }}</a>
+        {% if comment[1].url and comment[1].url != '' %}
+            <a href="{{ comment[1].url }}" target="_blank">{{ name }}</a>
         {% else %}
             {{ name }}
         {% endif %} wrote:
