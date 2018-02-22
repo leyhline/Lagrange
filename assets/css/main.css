@@ -193,6 +193,34 @@ hr {
   list-style: none;
 }
 
+.posts-year {
+  font-family: "Quattrocento Sans", sans-serif;
+  color: #333;
+  font-weight: bold;
+  margin: 1em 0;
+  font-size: 1.25em;
+}
+
+.posts-item {
+  height: 8rem;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
+}
+
+.posts-item a {
+  font-family: "Quattrocento Sans", sans-serif;
+  line-height: 0;
+  text-decoration: none;
+  background: #fff;
+  opacity: 0.6;
+  padding: 2px;
+}
+
 .post-date {
   display: block;
   margin-top:3px;
