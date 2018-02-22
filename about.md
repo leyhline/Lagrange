@@ -19,3 +19,7 @@ Ultimately, what is left is my interest for electronics and mathematics but that
 </figure>
 
 I'd also like to lighten up my posts by some random artwork from the [Metropolitan Museum of Art's Collection](https://www.metmuseum.org/art/collection#!?showOnly=openaccess). Many images are released into public domain (that's really nice!) and apart from that it's simply fun to browse their gallery.
+
+<hr>
+
+{% include comments.html %}
