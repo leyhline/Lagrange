@@ -16,9 +16,14 @@ permalink: archive/
     {% endunless %}
     <li itemscope>
       <a class="posts-item" href="{{ site.baseurl }}{{ post.url }}" style="background-image:url('{{ site.baseurl }}/assets/{{ post.slug }}/cover.jpg')">
-        <p>{{ post.title }}</p>
+        <p>
+          {{ post.title }}
+          <br>
+          <span class="post-date">
+            <i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date: "%B %-d" }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}
+          </span>
+        </p>
       </a>
-      <p class="post-date"><span><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date: "%B %-d" }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span></p>
     </li>
   {% endfor %}
 </ul>

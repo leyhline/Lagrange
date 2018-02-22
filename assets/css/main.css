@@ -49,6 +49,14 @@ h1, h2, h3, h4, h5, h6 {
   color: #333;
 }
 
+.posts h1 {
+  margin-bottom: 0.5rem;
+}
+
+.posts p {
+  margin-top: -1rem;
+}
+
 a {
   text-decoration: underline;
   color: #333;
@@ -215,10 +223,21 @@ hr {
 
 .posts-item p {
   font-family: "Quattrocento Sans", sans-serif;
-  line-height: 1.2em;
-  background: #fff;
+  line-height: 1em;
+  background: #000;
   opacity: 0.6;
   padding: 3px;
+  color: #ddd;
+}
+
+.posts-item p:hover {
+  color:#fff;
+}
+
+.posts-item .post-date {
+  margin-top: 0.3em;
+  margin-bottom: 0;
+  color: #ccc;
 }
 
 .post-date {
