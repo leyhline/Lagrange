@@ -228,6 +228,7 @@ hr {
   opacity: 0.6;
   padding: 3px;
   color: #ddd;
+  border-radius: 5px;
 }
 
 .posts-item p:hover {
@@ -306,7 +307,6 @@ hr {
 .footer {
   color: #999;
   text-align: center;
-  margin: 2rem;
 }
 
 .footer a {
