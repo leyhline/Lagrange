@@ -15,10 +15,10 @@ permalink: archive/
       {% endif %}
     {% endunless %}
     <li itemscope>
-      <p class="posts-item" style="background-image:url('{{ site.baseurl }}/assets/{{ post.slug }}/cover.jpg')">
-        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-        <p class="post-date"><span><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date: "%B %-d" }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span></p>
-      </p>
+      <a class="posts-item" href="{{ site.baseurl }}{{ post.url }}" style="background-image:url('{{ site.baseurl }}/assets/{{ post.slug }}/cover.jpg')">
+        <p>{{ post.title }}</p>
+      </a>
+      <p class="post-date"><span><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date: "%B %-d" }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span></p>
     </li>
   {% endfor %}
 </ul>
