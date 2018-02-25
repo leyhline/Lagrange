@@ -59,7 +59,7 @@ plt.show()
 
 And this first blog post might be *sufficiently good* in motivating me to continue. To continue with my "research" and to continue writing down my insights to the best of my ability.
 
-### Afterword: A more extrinsic perspective
+## Afterword: A more extrinsic perspective
 
 <figure>
   <img src="{{ site.baseurl }}/assets/{{ page.slug }}/iq_distribution.svg" alt="IQ distribution" style="min-width:80%;">
