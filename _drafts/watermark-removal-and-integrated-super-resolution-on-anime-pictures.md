@@ -23,7 +23,7 @@ I was already planning on collecting data (i.e. anime pictures) and throwing it 
 Mr. Berg is a diehard fan of an anime called [Coppelion](https://myanimelist.net/anime/9479/Coppelion). The series has quite an interesting look but at the end it only received mixed reviews. Therefore, not much merchandise is available. By stalking the the staff's twitter or something he got some small sample pictures of official artwork.
 
 <figure>
-    {% assign sample_width = "23%" %}
+    {% assign sample_width = "130px" %}
     {% assign sample_display = "inline" %}
     <img src="{{ site.baseurl }}/assets/{{ page.slug }}/sample1.jpg" alt="Coppelion sample 1" style="max-width:{{ sample_width }};display:{{ sample_display }};">
     <img src="{{ site.baseurl }}/assets/{{ page.slug }}/sample3.jpg" alt="Coppelion sample 2" style="max-width:{{ sample_width }};display:{{ sample_display }};">
@@ -44,9 +44,9 @@ Well, that's obviously too small for printing a poster or ordering a custom [Dak
 ### 1. Remove the watermark
 
 <figure>
-    <img src="{{ site.baseurl }}/assets/{{ page.slug }}/sample2.jpg" alt="Coppelion sample 2" style="max-width:40%;display:inline-block;">
+    <img src="{{ site.baseurl }}/assets/{{ page.slug }}/sample2.jpg" alt="Coppelion sample 2" style="max-width:42%;display:inline-block;">
     <p style="display:inline-block;vertical-align:top;font-size:5em;">➧</p>
-    <img src="{{ site.baseurl }}/assets/{{ page.slug }}/clean2.jpg" alt="Coppelion cleaned sample 2" style="max-width:40%;display:inline-block;">
+    <img src="{{ site.baseurl }}/assets/{{ page.slug }}/clean2.jpg" alt="Coppelion cleaned sample 2" style="max-width:42%;display:inline-block;">
     <figcaption>
     This watermark got removed by hand by Mr. Berg himself. He asserted that he has no artistic talent whatsoever.
     </figcaption>
