@@ -11,16 +11,16 @@ Some months ago I was writing messages with an online acquaintance I know from a
     <br>
     <img src="{{ site.baseurl }}/assets/{{ page.slug }}/deepdream_skyanimals.jpg" alt="Close up of some dreamed up sky animals">
     <figcaption>
-    Exemplary transformation by Google's DeepDream, taken from <a href="https://research.googleblog.com/2015/06/inceptionism-going-deeper-into-neural.html">the original blog post</a>.
+    Exemplary transformation by Google’s DeepDream, taken from <a href="https://research.googleblog.com/2015/06/inceptionism-going-deeper-into-neural.html">the original blog post</a>.
     <br>
-    Since the model was trained on lots of animal pictures it tries to spot them, even if nothing's there, resulting in such hallucinations.</figcaption>
+    Since the model was trained on lots of animal pictures it tries to spot them, even if nothing’s there, resulting in such hallucinations.</figcaption>
 </figure>
 
 I was already planning on collecting data (i.e. anime pictures) and throwing it at some standard models like Google's classical [DeepDream](https://research.googleblog.com/2015/06/inceptionism-going-deeper-into-neural.html). Long-term goal is of course to generate professional-quality artwork just from a few keywords but that's far from possible at the moment. Fortunately Mr. Berg had a problem that might be easily solvable with today's technology. If you ever read this: I really owe you one for this idea. It's right in the scope of what I can accomplish with my limited resources.
 
 ## Problem description
 
-Mr. Berg is a diehard fan of an anime called [Coppelion](https://myanimelist.net/anime/9479/Coppelion). The series has quite an interesting look but at the end it only received mixed reviews. Therefore, not much merchandise is available. By stalking the the staff's twitter or something he got some small sample pictures of official artwork.
+Mr. Berg is a diehard fan of an anime called [Coppelion](https://myanimelist.net/anime/9479/Coppelion). The series has quite an interesting look but at the end it only received mixed reviews. Therefore not much merchandise is available. By stalking the the staff's twitter or something he got some small sample pictures of official artwork.
 
 <figure>
     {% assign sample_width = "130px" %}
@@ -54,8 +54,8 @@ Well, that's obviously too small for printing a poster or ordering a custom [Dak
 
 Depending on the level of detail of the specific image this might be possible for any human with basic Photoshop skills. But it's very time consuming since every line and every color has to be chosen carefully.
 
-For a computer it's possible, too. If the computer can distinguish the watermark from the picture itself it can look at the surrounding pixels and with some mathematical optimization incrementally remove parts of the watermark until it's gone completely. [Google had a nice paper about this](https://research.googleblog.com/2017/08/making-visible-watermarks-more-effective.html) last year. 
-Unfortunately this approach won't work in our case since there are neither enough images with an identical watermark to make distinction possible, nor is it unobtrusive enough. You see, it's <span style="font-size:1.5em;">large</span> and **bold** and <span style="text-shadow: 0px 0px 5px #f00;">glowing</span>! This makes it hard to get things right if you only look at some numbers in a small surrounding area. It might be easier if you know that you're supposed to draw some anime girls.
+For a computer it's possible, too. If the computer can distinguish the watermark from the picture itself it can look at the surrounding pixels and with some mathematical optimization incrementally remove parts of the watermark until it's gone completely. [Google had a nice paper about this last year](https://research.googleblog.com/2017/08/making-visible-watermarks-more-effective.html). 
+Unfortunately this approach won't work in our case since there are neither enough images with an identical watermark to make distinction possible, nor is it unobtrusive enough. You see, it's <span style="font-size:1.5em;">large</span> and **bold** and <span style="text-shadow: 0px 0px 5px #f00;">glowing</span>! This makes it hard to get things right if you only look at some numbers in a small surrounding area. It might be easier if the computer *knows* that it's supposed to draw some anime girls.
 
 ### 2. Enlarge without loss of quality
 
@@ -64,19 +64,19 @@ This is supposedly solved by [waifu2x](http://waifu2x.udp.jp/) which also uses D
 <figure>
     <img src="{{ site.baseurl }}/assets/{{ page.slug }}/waifu2x.png" alt="waifu2x example">
     <figcaption>
-    Taken from the the project's <a href="https://github.com/nagadomi/waifu2x">Github repository</a> showing the popular virtual idol Hatsune Miku from the Vocaloid software (<a href="http://piapro.net/en_for_creators.html">CC BY-NC by piapro</a>).
+    Taken from the the project’s <a href="https://github.com/nagadomi/waifu2x">Github repository</a> showing the popular virtual idol Hatsune Miku from the Vocaloid software (<a href="http://piapro.net/en_for_creators.html">CC BY-NC by piapro</a>).
     </figcaption>
 </figure>
 
-The paper presenting the underlying theory itself is from 2015. By now there might be some more advanced techniques and models. That's something I have to explore some more at a later time.
+The paper presenting the underlying theory itself is from 2015. By now there might be some more advanced techniques and models. That's something I have to explore at a later time.
 
-But what's important to realize is the limit of super-resolution. Scaling the image up too much is like drawing something completely new. A flower seen from afar might just be a blob of color in our eyes. But up close it's a complex organic life form where every petal has it's own highly individual texture and form. If we were to draw these details on our own, where would they come from?
+But what's important to realize is the limit of super-resolution. Scaling the image up too much is like drawing something completely new. A flower seen from afar might just be a blob of color in our eyes. But up close it's a complex organic life form where every petal has it's own highly individual texture and shape. *A Flower Is Not A Flower*. If we were to draw these details on our own without looking at reality, where would the necessary information come from?
 
 ## Approach
 
-The main component will of course be aforementioned *Deep Learning*. I don't want to go into details because if you already know about it superficial explanations will only bore you. And if you're here for anime you surely want to know about [applications](http://deeplearninggallery.com/), not about technical details. Just as much: Such models take some data as input, do a whole lot of calculations and return the result. The important part is that these calculations are purely *learned*. At first the model returns only rubbish and if you continue to train it with random data this won't change. But if there's a pattern the results will improve considerably in a short amount of time of maybe a few weeks (easier problems won't take that much time; maybe some hours). Without programming, manual rules, just by throwing data at it like an idiot. It's great! 
+The main component will of course be aforementioned *Deep Learning*. I don't want to go into details because if you already know about it superficial explanations will only bore you. And if you're here for anime you surely want to know about [applications](http://deeplearninggallery.com/), not about technical details. Just as much: Such models take some data as input, do a whole lot of calculations and return the result. The important part is that these calculations are purely *learned*. At first the model returns only rubbish and if you continue to train it with random data this won't change. But if there's a pattern the results will improve considerably in a short amount of time of maybe a few weeks (easier problems won't take that much time; like some hours). Without programming, manual rules… Just by throwing data at it like an idiot. It's great! 
 
-The more complicated the pattern the harder it is to learn. Sounds logical but it's often not clear which problems are fit for Deep Learning. My favorite rule of thumb is from the book "Deep Learning". Yes, the title's slightly presumptuous (even their domain name is [deeplearningbook.org](http://www.deeplearningbook.org/)) but it's most recommendable!
+The more complicated the pattern the harder it is to learn. Sounds logical but it's often not clear which problems are fit for Deep Learning. My favorite rule of thumb is from the book "Deep Learning". Yes, the title's slightly presumptuous (even their domain name is [deeplearningbook.org](http://www.deeplearningbook.org/)) but it's a most recommendable read!
 
 > Most tasks that consist of mapping an input vector to an output vector, and that are easy for a person to do rapidly, can be accomplished via deep learning, given sufficiently large models and sufficiently large datasets of labeled training examples.
 
