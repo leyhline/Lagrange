@@ -76,13 +76,13 @@ But what's important to realize is the limit of super-resolution. Scaling the im
 
 The main component will of course be aforementioned *Deep Learning*. I don't want to go into details because if you already know about it superficial explanations will only bore you. And if you're here for anime you surely want to know about [applications](http://deeplearninggallery.com/), not about technical details. Just as much: Such models take some data as input, do a whole lot of calculations and return the result. The important part is that these calculations are purely *learned*. At first the model returns only rubbish and if you continue to train it with random data this won't change. But if there's a pattern the results will improve considerably in a short amount of time of maybe a few weeks (easier problems won't take that much time; maybe some hours). Without programming, manual rules, just by throwing data at it like an idiot. It's great! 
 
-The more complicated the pattern the harder it is to learn. Sounds logical but it's often not clear which problems are fit for Deep Learning. My favorite rule of thumb is from the book "Deep Learning". Yes, the title's slightly presumptuous (even their domain name is [deeplearningbook.org](http://www.deeplearningbook.org/) but it's a very good read!
+The more complicated the pattern the harder it is to learn. Sounds logical but it's often not clear which problems are fit for Deep Learning. My favorite rule of thumb is from the book "Deep Learning". Yes, the title's slightly presumptuous (even their domain name is [deeplearningbook.org](http://www.deeplearningbook.org/)) but it's most recommendable!
 
 > Most tasks that consist of mapping an input vector to an output vector, and that are easy for a person to do rapidly, can be accomplished via deep learning, given sufficiently large models and sufficiently large datasets of labeled training examples.
 
-But since even Mr. Berg were able to do this (as seen above) a computer should be easily capable, too. Okay, he couldn't do this *rapidly* but that are minor details.
+Since even Mr. Berg were able to do this (as seen above) a computer should be easily capable, too. Okay, he couldn't do it *rapidly* but that are minor details.
 
-Therefore we just need a lot of data pairs of images with watermarks and their corresponding clean versions. I already scraped whole [Danbooru](https://danbooru.donmai.us/) (don't go here either if you're currently at work), a large database of 3 million anime pictures with corresponding tags describing the content. There's also a downloadable mirror from [Gwern](https://www.gwern.net/Danbooru2017) which is most kind of him since it took me a whole month downloading all this stuff while putting burden on the server. Now I just need to place some watermarks on these pictures, match them accordingly and throw them at my supercomputer. Then I'll also incorporate a popular model for super-resolution and I'm done. According to hearsay it's also favorable to train one model at multiple tasks jointly because bidirectional transfer of learning happens.
+Therefore we just need a lot of data pairs of images with watermarks and their corresponding clean versions. I already scraped whole [Danbooru](https://danbooru.donmai.us/) (don't go here either if you're currently at work), a large database of 3 million anime pictures with corresponding tags describing the content. There's also a downloadable mirror from [Gwern](https://www.gwern.net/Danbooru2017) he prepared independently. This is most kind of him since it took me a whole month downloading all this stuff while putting burden on the server. Now I just need to place some watermarks on these pictures, match them accordingly and throw them at my supercomputer. Then I'll also incorporate a popular model for super-resolution and I'm done. According to hearsay it's also favorable to train one model at multiple tasks jointly because bidirectional transfer of learning happens.
 
 ## Challenges
 
@@ -103,7 +103,7 @@ This is the artist behind this post's cover image. Needless to say that I've nev
 
 > Although fascinated by the nude human figure, the artist worked slowly and was uncomfortable with female models, so he derived such scenes from his imagination…
 
-I can relate to this! But what's more important, that's what I'm trying to do. Teaching a computer concepts to imitate human cognition and feign imagination. What more are these failed results of Generative Adversarial Networks than Impressionism by Machines?
+I can relate to this! But what's more important, that's what I'm trying to do. Teaching a computer concepts to imitate human cognition and feign imagination. What more are these failed results of Generative Adversarial Networks than *Impressionism by Machines*?
 
 <figure>
     <img src="{{ site.baseurl }}/assets/{{ page.slug }}/yellowish_bird.jpg" alt="GAN example">
