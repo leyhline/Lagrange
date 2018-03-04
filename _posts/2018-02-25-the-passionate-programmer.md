@@ -23,7 +23,7 @@ But enough chitchat. Let's take a look at the book in question!
 
 <figure>
     <a href="https://pragprog.com/book/cfcar2/the-passionate-programmer"><img src="{{ site.baseurl }}/assets/{{ page.slug }}/book_cover.jpg" alt="Book cover of The Passionate Programmer" style="min-width:60%;border:1px solid black;border-radius:0;"></a>
-    <figcaption>This is the real cover of the book; not the one above. Very tasteful. By the way, the author is a trained saxophonist. Who would've thought?</figcaption>
+    <figcaption>This is the real cover of the book; not the one above. Very tasteful. By the way, the author is a trained saxophonist. Who would’ve thought?</figcaption>
 </figure>
 
 ## General overview
@@ -50,7 +50,7 @@ As I already wrote, most of the content was more of a reminder for me. But some 
     <img src="{{ site.baseurl }}/assets/{{ page.slug }}/daedalus_forming_the_wings_of_icarus_out_of_wax.jpg" alt="Daedalus Forming the Wings of Icarus out of Wax (18th century) by Franz Xaver Wagenschön">
     <figcaption>
     Daedalus Forming the Wings of Icarus out of Wax (18th century) by Franz Xaver Wagenschön<br>
-    The famous legend of Icarus who ignored his fathers warnings and flew too high… And as a result fell to his death. Some see him as a fool, for others he's a hero.
+    The famous legend of Icarus who ignored his fathers warnings and flew too high… And as a result fell to his death. Some see him as a fool, for others he’s a hero.
     </figcaption>
 </figure>
 

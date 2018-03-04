@@ -16,9 +16,9 @@ Unfortunately, there's a catch (as always). Clear writing is a skill that takes 
 
 <figure>
   <img src="{{ site.baseurl }}/assets/{{ page.slug }}/interest_vector_2d.svg" alt="2D interest space" style="min-width:60%;">
-  <figcaption>While the Chinese person (the <em>unit vector</em>) throws all time (and hopefully interest, too) into studying my friend wastes his time. Instead of doing useless schoolwork he should rather concentrate on video games. Could've become a pro gamer this way. Such a loser.<br>
-  Although geometrically this plot is quite interesting: While my “friend” is at 0.95 with video games he still achieves 0.31 in studying. Taking the sum he's beating our Chinese strawman.<br>
-  Conclusion: This is a rather stupid model for measuring interest, isn't it?</figcaption>
+  <figcaption>While the Chinese person (the <em>unit vector</em>) throws all time (and hopefully interest, too) into studying my friend wastes his time. Instead of doing useless schoolwork he should rather concentrate on video games. Could’ve become a pro gamer this way. Such a loser.<br>
+  Although geometrically this plot is quite interesting: While my “friend” is at 0.95 with video games he still achieves 0.31 in studying. Taking the sum he’s beating our Chinese strawman.<br>
+  Conclusion: This is a rather stupid model for measuring interest, isn’t it?</figcaption>
 </figure>
 
 <button onclick="toggleCode(0)" class="toggle">Show Code</button>
