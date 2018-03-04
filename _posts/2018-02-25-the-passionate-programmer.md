@@ -70,7 +70,7 @@ I never really considered this before at my current experience level. But now th
 
 It can be something easy like creating web pages or working as contractor. Or my own PropTech startup I can wreck. (I already got some ideas; but idea and execution are different pairs of shoes.) And since we're getting [unrealistic](https://www.unrealengine.com/): My own super-successful video game. :godmode: The possibilities are endless.
 
-### Afterword: Why this cover image?
+## Afterword: Why this cover image?
 
 The image at the top shows quite a funny legend from Roman mythology. It's about Vulcan, the old guy on the right who's incidentally the god of fire and metalworking, and his wife Venus, the goddess of beauty who's quite unfaithful (here in bed with Mars, god of war). But it's totally not her fault! She was forcefully married to Vulcan and he's a really boring guy. The legend itself goes a bit different but here it seems like he's some nerd who's that immersed in his work that he doesn't even realize that he is cheated on literally right behind his back.
 
