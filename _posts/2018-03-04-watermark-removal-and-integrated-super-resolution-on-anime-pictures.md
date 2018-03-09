@@ -1,7 +1,7 @@
 ---
 title: "Watermark Removal and Integrated Super-Resolution on Anime Pictures"
 tags: [machine learning, anime, image processing]
-caption: Bathers (1874–75) by Paul Cézanne
+caption: "Bathers (1874–75) by Paul Cézanne"
 ---
 
 Some months ago I was writing messages with an online acquaintance I know from a German anime forum that's shut down by now. Let's call him *Mr. Berg*. During that time I was also working on [my Bachelor's thesis](https://github.com/leyhline/vix-term-structure/blob/master/thesis/thesis.pdf) about [Deep Learning](https://en.wikipedia.org/wiki/Deep_learning) (some trendy machine learning method). I was also thinking about applying these techniques on anime stuff just for the fun of it. These models can have an arbitrarily large input and/or output. Meaning: It's perfectly possible to generate whole images using Deep Learning.
@@ -20,7 +20,7 @@ I was already planning on collecting data (i.e. anime pictures) and throwing it 
 
 ## Problem description
 
-Mr. Berg is a diehard fan of an anime called [Coppelion](https://myanimelist.net/anime/9479/Coppelion). The series has quite an interesting look but at the end it only received mixed reviews. Therefore not much merchandise is available. By stalking the the staff's twitter or something he got some small sample pictures of official artwork.
+Mr. Berg is a diehard fan of an anime called [Coppelion](https://myanimelist.net/anime/9479/Coppelion). The series has quite an interesting look but at the end it only received mixed reviews. Therefore, not much merchandise is available. By stalking the staff's twitter or something he got some small sample pictures of official artwork.
 
 <figure>
     {% assign sample_width = "130px" %}
@@ -52,7 +52,7 @@ Well, that's obviously too small for printing a poster or ordering a custom [Dak
     </figcaption>
 </figure>
 
-Depending on the level of detail of the specific image this might be possible for any human with basic Photoshop skills. But it's very time consuming since every line and every color has to be chosen carefully.
+Depending on the level of detail of the specific image this might be possible for any human with basic Photoshop skills. But it's very time-consuming since every line and every color has to be chosen carefully.
 
 For a computer it's possible, too. If the computer can distinguish the watermark from the picture itself it can look at the surrounding pixels and with some mathematical optimization incrementally remove parts of the watermark until it's gone completely. [Google had a nice paper about this last year](https://research.googleblog.com/2017/08/making-visible-watermarks-more-effective.html). 
 Unfortunately this approach won't work in our case since there are neither enough images with an identical watermark to make distinction possible, nor is it unobtrusive enough. You see, it's <span style="font-size:1.5em;">large</span> and **bold** and <span style="text-shadow: 0px 0px 5px #f00;">glowing</span>! This makes it hard to get things right if you only look at some numbers in a small surrounding area. It might be easier if the computer *knows* that it's supposed to draw some anime girls.
@@ -70,7 +70,7 @@ This is supposedly solved by [waifu2x](http://waifu2x.udp.jp/) which also uses D
 
 The paper presenting the underlying theory itself is from 2015. By now there might be some more advanced techniques and models. That's something I have to explore at a later time.
 
-But what's important to realize is the limit of super-resolution. Scaling the image up too much is like drawing something completely new. A flower seen from afar might just be a blob of color in our eyes. But up close it's a complex organic life form where every petal has it's own highly individual texture and shape. *A Flower Is Not A Flower*. If we were to draw these details on our own without looking at reality, where would the necessary information come from?
+But what's important to realize is the limit of super-resolution. Scaling the image up too much is like drawing something completely new. A flower seen from afar might just be a blob of color in our eyes. But up close it's a complex organic life form where every petal has its own highly individual texture and shape. *A Flower Is Not A Flower*. If we were to draw these details on our own without looking at reality, where would the necessary information come from?
 
 ## Approach
 
@@ -82,11 +82,11 @@ The more complicated the pattern the harder it is to learn. Sounds logical but i
 
 Since even Mr. Berg were able to do this (as seen above) a computer should be easily capable, too. Okay, he couldn't do it *rapidly* but that are minor details.
 
-Therefore we just need a lot of data pairs of images with watermarks and their corresponding clean versions. I already scraped whole [Danbooru](https://danbooru.donmai.us/) (don't go here either if you're currently at work), a large database of 3 million anime pictures with corresponding tags describing the content. There's also a downloadable mirror from [Gwern](https://www.gwern.net/Danbooru2017) he prepared independently. This is most kind of him since it took me a whole month downloading all this stuff while putting burden on the server. Now I just need to place some watermarks on these pictures, match them accordingly and throw them at my supercomputer. Then I'll also incorporate a popular model for super-resolution and I'm done. According to hearsay it's also favorable to train one model at multiple tasks jointly because bidirectional transfer of learning happens.
+Therefore, we just need a lot of data pairs of images with watermarks and their corresponding clean versions. I already scraped whole [Danbooru](https://danbooru.donmai.us/) (don't go here either if you're currently at work), a large database of 3 million anime pictures with corresponding tags describing the content. There's also a downloadable mirror from [Gwern](https://www.gwern.net/Danbooru2017) he prepared independently. This is most kind of him since it took me a whole month downloading all this stuff while putting burden on the server. Now I just need to place some watermarks on these pictures, match them accordingly and throw them at my supercomputer. Then I'll also incorporate a popular model for super-resolution and I'm done. According to hearsay it's also favorable to train one model at multiple tasks jointly because bidirectional transfer of learning happens.
 
 ## Challenges
 
-Unfortunately there are some problems at the supercomputer part. Since I lost my primary source of computational power I have to resort to some hacker tricks and get distributed learning to work. This is not trivial since the optimization algorithms normally aren't suited for this. I'll write a more technical post about this in the future. It will be just like that one time in *To Aru Kagaku no Railgun* where this peculiar scientist woman connects the brains of thousands of people to do a few calculations. Additionally she receives super powers.
+Unfortunately there are some problems at the supercomputer part. Since I lost my primary source of computational power I have to resort to some hacker tricks and get distributed learning to work. This is not trivial since the optimization algorithms normally aren't suited for this. I'll write a more technical post about this in the future. It will be just like that one time in *To Aru Kagaku no Railgun* where this peculiar scientist woman connects the brains of thousands of people to do a few calculations. Additionally, she receives super powers.
 
 <figure>
     <img src="{{ site.baseurl }}/assets/{{ page.slug }}/kiyama_harumi.jpg" alt="Kiyama Harumi">
@@ -95,7 +95,7 @@ Unfortunately there are some problems at the supercomputer part. Since I lost my
     </figcaption>
 </figure>
 
-Furthermore I have no idea how to extract the watermark in a straightforward way. But that's a problem for the future.
+Furthermore, I have no idea how to extract the watermark in a straightforward way. But that's a problem for the future.
 
 ## Afterword: About Paul Cézanne
 
