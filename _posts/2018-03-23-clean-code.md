@@ -149,9 +149,9 @@ public class PlayerMovement : IMovable
 
 ### Step 1: Removing redundant comments
 
-Okay, right at the beginning it a *TODO* comment recommending renaming the class. At first, I wanted to use this only for the player but at the end all ground-moving units used this class (and we only had ground-moving units.)
+Okay, right at the beginning is a *TODO* comment recommending renaming the class. At first, I wanted to use this only for the player but at the end all ground-moving units used this class (and we only had ground-moving units.)
 
-First, let's rename the class to **GroundMovement**. Furthermore, the books recommends being *very* sparing with comments and docstrings. The rationale is, that often one forgets to update comments on changes. It's better to *Explain Yourself in Code*. So let's try removing the comments and take a look if it's still readable.
+First, let's rename the class to **GroundMovement**. Furthermore, the book recommends being *very* sparing with comments and docstrings. The rationale is, that often one forgets to update comments on changes. It's better to *Explain Yourself in Code*. So let's try removing the comments and take a look if it's still readable.
 
 <button onclick="toggleCode(2)" class="toggle">Show Code</button>
 
