@@ -46,3 +46,6 @@ I think the books from the [Pragmatic Bookshelf](https://pragprog.com/) aren't r
 
 ## Afterword: About the cover image
 
+This piece is titled "Music Room" but all the people are sitting around and reading. Did you notice? Why is that? A music room often must have been very large for fitting a grand piano into. This is such a waste if nobody is playing music. Might such a music room be an equivalent to a modern living room? A place where everybody sits around when nothing else is to do? Even if it's just for reading?
+
+But the main reason for choosing this image was simply that I am often reading late at night so it kind of resonated with me.
