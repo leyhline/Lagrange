@@ -336,7 +336,7 @@ public class GroundMovement : IMovable
 
 ### Step 3: Working on methods
 
-Up till now I thought methods and functions were mainly for avoiding repetition and maybe splitting responsibilities. Readability was only an afterthought. But now I realized that this is equally important for writing maintainable code. Sure, an additional method call might be deemed unneccessary but we're not doing low-level system programming where this matters. Besides, the compiler might inline some methods anyway.
+Up till now I thought methods and functions were mainly for avoiding repetition and maybe splitting responsibilities. Readability was only an afterthought. But now I realized that this is equally important for writing maintainable code. Sure, an additional method call might be deemed unneccessary, but we're not doing low-level system programming where this matters. Besides, the compiler might inline some methods anyway.
 
 So let's first introduce a new method `PixelToCellCoordinate` (using a new C# 7 feature for multiple returns; simply using a Tuple is also possible). This method is only used in the `FindPath` method. Ultimately, it's the same principle as learning in school's writing class: Many short sentences are easier to understand than a single nested one.
 

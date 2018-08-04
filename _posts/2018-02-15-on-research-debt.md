@@ -54,7 +54,7 @@ plt.show()
 
 But isn't it okay this way? I like writing as much as maths and programming. Sure, I'll never be a genius this way. I'll never be a unit vector, following a single goal with all I have. But I might become *sufficiently good* to get something useful out of my efforts regardless.
 
-And this first blog post might be *sufficiently good* in motivating me to continue. To continue with my "research" and to continue writing down my insights to the best of my ability.
+And this first blog post might be *sufficiently good* at motivating me to continue. To continue with my "research" and to continue writing down my insights to the best of my ability.
 
 ## Afterword: A more extrinsic perspective
 

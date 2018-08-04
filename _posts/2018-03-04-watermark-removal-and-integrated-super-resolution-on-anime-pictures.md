@@ -64,7 +64,7 @@ This is supposedly solved by [waifu2x](http://waifu2x.udp.jp/) which also uses D
 <figure>
     <img src="{{ site.baseurl }}/assets/{{ page.slug }}/waifu2x.png" alt="waifu2x example">
     <figcaption>
-    Taken from the the project’s <a href="https://github.com/nagadomi/waifu2x">Github repository</a> showing the popular virtual idol Hatsune Miku from the Vocaloid software (<a href="http://piapro.net/en_for_creators.html">CC BY-NC by piapro</a>).
+    Taken from the project’s <a href="https://github.com/nagadomi/waifu2x">Github repository</a> showing the popular virtual idol Hatsune Miku from the Vocaloid software (<a href="http://piapro.net/en_for_creators.html">CC BY-NC by piapro</a>).
     </figcaption>
 </figure>
 

@@ -36,7 +36,7 @@ Maybe this generality is the reason this book is still a good read nearly twenty
 
 ## Personal conclusions
 
-When reading the summary from Wikipedia above I realize that my ideal book is the total opposite from this one:
+When reading the summary from Wikipedia above I realize that my ideal book is the total opposite to this one:
 
 > The book does present a specific systematic theory. The authors argue that in practice this theory might need to be adapted to the specific needs of a project, nevertheless they provide a framework formally describing a style of software development. Instead of analogies and short stories they provide references to scientific studies from various diverse fields.
 
