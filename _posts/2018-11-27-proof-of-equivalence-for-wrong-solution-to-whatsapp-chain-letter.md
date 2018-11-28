@@ -50,7 +50,7 @@ Now, I'd like to show that \\( +\_\omega \\) and \\( +\_\Omega \\) really work t
 Fortunately, this can be done by simple [induction](https://en.wikipedia.org/wiki/Mathematical_induction) which is a really cool proof technique. To show that something holds for every natural number one just needs to prove that:
 
 1. It holds for a base number, in our case \\( x=0 \\).
-2. It holds for every next number: Let's use \\( x+1 \\) and \\( y+1 \\) here because the recursive solution is build around the pattern, that both get incremented at the same rate.
+2. It holds for every next number: Let's use \\( x+1 \\) and \\( y+1 \\) here because the recursive solution is build around the pattern that both get incremented at the same rate.
 
 Okay, let's rock! Most of the time, the base step is really easy. Just set \\( x=0 \\) and it's basically done.
 
