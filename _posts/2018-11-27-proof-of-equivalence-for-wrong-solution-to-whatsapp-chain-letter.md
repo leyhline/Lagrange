@@ -87,7 +87,7 @@ At *ih* we're using the *inductive hypothesis* because we know there is at least
     </figcaption>
 </figure>
 
-Okay, I real mathematician™ would laugh his ass off if he saw me calling this a *proof*.
+Okay, a real mathematician™ would laugh his ass off if he saw me calling this a *proof*.
 But either way, if we want to know the result of, let's say… \\( 8,567,479,662,374,590 +\_\omega 8,567,479,662,374,593 \\) then we don't need to do ten quadrillion calculations, we can instead do just one calculation of \\( 8,567,479,662,374,590 +\_\Omega 8,567,479,662,374,593 \\) instead and be sure that we've got an identical result. Wow!
 
 <hr>
