@@ -6,11 +6,10 @@ caption: "Venus and Mars Embracing as Vulcan Works at His Forge (1543) by Enea V
 
 Since my formal education — much to my preference — was more focused on the theoretical aspects of computer science, I realize that I still lack some practical knowledge and professional experience. At the moment I am working on this by looking for a job in industry. But I don't think this is sufficient.
 
-<blockquote>
-“Erfahrung heißt gar nichts. Man kann seine Sache auch 35 Jahre schlecht machen.” <br>
-Translated: <i>Experience means nothing. One can do a bad job for as long as 35 years.</i>
-</blockquote>
- After the German writer <i>Kurt Tucholsky.</i>
+> "Erfahrung heißt gar nichts. Man kann seine Sache auch 35 Jahre schlecht machen." \\
+> Translated: *Experience means nothing. One can do a bad job for as long as 35 years.*
+
+After the German writer *Kurt Tucholsky*.
 
 This is quite the statement but (as always) there is also a bit of truth. (That doesn't mean one should take such famous quotes seriously. They may sound nice but it's random if they really apply. I never even read something by Tucholsky although I'm German.) Therefore, I'm trying to not only learn from practice but supplementary from the books of seasoned professionals that are widely acclaimed. For a list of such books I just googled `software engineering must read`. How trite! Here are some results: 
 
