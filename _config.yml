@@ -25,8 +25,8 @@ permalink:           /:year/:month/:day/:title/
 plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag, jemoji]
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
-title:		           'Research Log'
-description:	       'pretending to be a scientist'
+title:               'Research Log'
+description:         'pretending to be a scientist'
 author:              'Thomas Leyh'
 url:                 https://leyhline.github.io
 
