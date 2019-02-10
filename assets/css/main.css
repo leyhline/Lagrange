@@ -394,10 +394,6 @@ pre code {
   background-color: transparent;
 }
 
-div.highlight {
-  display: none;
-}
-
 /* Pygments via Jekyll */
 .highlight {
   margin-bottom: 1rem;

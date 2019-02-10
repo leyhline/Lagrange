@@ -3,6 +3,8 @@ title: "Book Review: Clean Code"
 tags: [book, programming, review]
 caption: "The Small Drawing-Room: Mme Hessel at Her Sewing Table (1917) by Édouard Vuillard"
 ---
+<style>div.highlight { display: none; }</style>
+<script src="{{ site.baseurl }}{% link /assets/js/utilities.js %}" async></script>
 
 Following up on my last book review I'd like to go a bit more into technical details this time by writing about *Clean Code*. On the one hand this is a well-known book by Robert C. Martin (nicknamed Uncle Bob), on the other hand this is a concept about writing maintainable and easy to read code. These are widespread ideas in programming and by simply doing a search on term one can find lots of blogs, explanations, initiatives etc. There are even some articles that claim that this is [THE book every programmer should read](https://hackernoon.com/the-book-every-programmer-should-read-33b5ef2e532a).
 
