@@ -270,6 +270,11 @@ hr {
   text-decoration: none;
 }
 
+.footnotes {
+  font-size: 16px;
+  line-height: 1.3rem;
+}
+
 /*
   Pagination
 */

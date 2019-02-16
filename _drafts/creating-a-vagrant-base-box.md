@@ -4,12 +4,12 @@ tags: [virtualization, vm, vagrant, libvirt, qemu, kvm, fedora]
 caption: "Wayfarers Looking at the Statue of Jizo Bosatsu in a Pine Grove at Hashiba (ca. 1840) by Utagawa Kuniyoshi"
 ---
 
-Virtual machines are nice for playing around with different operating systems[^linux], software setups and network configurations. But they are a pain to install and after using them for some time it's hard to remember all the steps that were necessary to get the machine to its current state. This lack of reproducibility isn't very *scientific*! Wouldn't it be nice to have some kind of specification – human readable, but also executable – for quickly creating VMs in a matter of seconds?
+Virtual machines are nice for playing around with different operating systems[^linux], software setups and network configurations. But they are a pain to install and after using them for some time it's hard to remember all the steps that were necessary to get the machine to its current state. This lack of reproducibility isn't very *scientific*! Wouldn't it be nice to have some kind of specification — human readable, but also executable — for quickly creating VMs in a matter of seconds?
 This is something [Vagrant](https://www.vagrantup.com/) promises to do (in combination with some tool for provisioning like [Ansible](https://www.ansible.com/)).
 
-[^linux]: Personally, I prefer different Linux distributions. Wouldn't want to use Windows if it isn't absolutely necessary.
+[^linux]: Personally, I prefer different Linux distributions. Wouldn't want to use Windows if it isn't necessary.
 
-There's also [a large number of base images available](https://app.vagrantup.com/boxes/search) so getting started just takes three commands. So far so good! Now, I've got some extravagant expectations:
+There're also [numerous base images available](https://app.vagrantup.com/boxes/search) so getting started just takes three commands. So far so good! Now, I've got some extravagant expectations:
 
 * I'd like to use a current version of [Fedora Server](https://getfedora.org/en/server/) (presently 29) because of its up-to-date repositories and built-in SELinux support.
 * Since my host is also Linux my obvious choice for running VMs is [QEMU](https://www.qemu.org/)/[KVM](https://www.linux-kvm.org/) (Kernel-based Virtual Machine) with hardware acceleration: I'll use Vagrant's [libvirt provider](https://github.com/vagrant-libvirt/vagrant-libvirt).
@@ -25,9 +25,9 @@ There's also [a large number of base images available](https://app.vagrantup.com
 
 ## Step 1: Create the VM and install Fedora
 
-We'll be mainly using the [`virt-manager`](https://virt-manager.org/) GUI because I'm lazy. But wait! This will do some kind of metadata preallocation when creating the VM image, resulting in a really large file on the host system.[^preallocation] There's no way to change this from the GUI so we first need to create the storage using the command line. Let's take a look at `man qemu-img`:
+We'll be mainly using the [`virt-manager`](https://virt-manager.org/) GUI because I'm lazy. But wait! This will do some kind of metadata preallocation when creating the VM image, resulting in a really large file on the host system.[^preallocation] There's no way to change this from the GUI, so we first need to create the storage using the command line. Let's take a look at `man qemu-img`:
 
-[^preallocation]: Actually, it's a bit more complicated. With metadata preallocation the image files won't actually use up the disk space but when reading the file attributes (with e.g. `ls -l`) the maximum size is displayed.
+[^preallocation]: Actually, it's a bit more complicated. With metadata preallocation the image files won't actually use up the disk space but when reading the file attributes (with e.g. `ls -l`) the given size is displayed.
 
 > "preallocation"
 >
@@ -90,7 +90,7 @@ Again, we just follow [Vagrant's documentation](https://www.vagrantup.com/docs/b
 
 > If you are creating a base box for private use, you should try not to follow these, as they open up your base box to security risks (known users, passwords, private keys, etc.).
 
-Yes, since we're building our own box it would be much safer to not follow the defaults and and configure the box in a more unique way. Then again, we could simply change all settings afterwards during provisioning. 
+Yes, since we're building our own box it would be much safer to not follow the defaults and configure the box in a more unique way. Then again, we could simply change all settings afterwards during provisioning. 
 
 ### Configure SSH Access
 
@@ -147,7 +147,7 @@ This is just a minor edit in the SSH server's configuration file.
 $ vi /etc/ssh/sshd_config
 ```
 
-At last, disconnect and shut down the VM. This is also the last change to remove unnecessary hardware from the VM.
+At last, disconnect and shut down the VM. This is also the last chance to remove unnecessary hardware from the VM.
 
 ## Step 3: Creating the Box
 
@@ -217,3 +217,9 @@ config.vm.synced_folder ".", "/vagrant", disabled: true
 This is directly [from Vagrant's documentation](https://www.vagrantup.com/docs/synced-folders/basic_usage.html#disabling).
 
 ## Afterword:
+
+We created a base image we can configure via textual `Vagrantfiles`, making it easy to quickly initialize virtual machines in a controlled manner. Distribution is easy and painless, too. This is the starting point for creating reproducible environments. But everything we had to do to arrive at this point involved a lot of manual work. This is where [https://www.packer.io/](Packer) (also from HashiCorp) comes in.
+
+> We strongly recommend using Packer to create reproducible builds for your base boxes, as well as automating the builds.
+
+It's promoted [at the top of Vagrant's documentation](https://www.vagrantup.com/docs/boxes/base.html#packer-and-vagrant-cloud) and might be worth a look in the future. But before using higher-level tools, it's nice to first do things by hand to understand what's happening under the hood. Is this a *scientific approach* or is it simply a waste of time?
