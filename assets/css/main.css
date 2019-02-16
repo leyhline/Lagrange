@@ -275,6 +275,13 @@ hr {
   line-height: 1.3rem;
 }
 
+@media (max-width: 30em) {
+  .footnotes {
+    font-size: 12px;
+    line-height: 1.2rem;
+  }
+}
+
 /*
   Pagination
 */
