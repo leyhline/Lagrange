@@ -4,7 +4,7 @@ tags: [virtualization, vm, vagrant, libvirt, qemu, kvm, fedora]
 caption: "Wayfarers Looking at the Statue of Jizo Bosatsu in a Pine Grove at Hashiba (ca. 1840) by Utagawa Kuniyoshi"
 ---
 
-Virtual machines are nice for playing around with different operating[^linux] systems, software setups and network configurations. But they are a pain to install and after using them for some time it's hard to remember all the steps that were necessary to get the machine to its current state. This lack of reproducibility isn't very *scientific*! Wouldn't it be nice to have some kind of specification – human readable, but also executable – for quickly creating VMs in a matter of seconds?
+Virtual machines are nice for playing around with different operating systems[^linux], software setups and network configurations. But they are a pain to install and after using them for some time it's hard to remember all the steps that were necessary to get the machine to its current state. This lack of reproducibility isn't very *scientific*! Wouldn't it be nice to have some kind of specification – human readable, but also executable – for quickly creating VMs in a matter of seconds?
 This is something [Vagrant](https://www.vagrantup.com/) promises to do (in combination with some tool for provisioning like [Ansible](https://www.ansible.com/)).
 
 [^linux]: Personally, I prefer different Linux distributions. Wouldn't want to use Windows if it isn't absolutely necessary.
@@ -25,7 +25,7 @@ There's also [a large number of base images available](https://app.vagrantup.com
 
 ## Step 1: Create the VM and install Fedora
 
-I'll be mainly using the [`virt-manager`](https://virt-manager.org/) GUI because I'm lazy. But wait! This will do some kind of metadata preallocation when creating the VM image, resulting in a really large file on the host system.[^preallocation] There's no way to change this from the GUI so we first need to create the storage using the command line. Let's take a look at `man qemu-img`:
+We'll be mainly using the [`virt-manager`](https://virt-manager.org/) GUI because I'm lazy. But wait! This will do some kind of metadata preallocation when creating the VM image, resulting in a really large file on the host system.[^preallocation] There's no way to change this from the GUI so we first need to create the storage using the command line. Let's take a look at `man qemu-img`:
 
 [^preallocation]: Actually, it's a bit more complicated. With metadata preallocation the image files won't actually use up the disk space but when reading the file attributes (with e.g. `ls -l`) the maximum size is displayed.
 
@@ -61,7 +61,7 @@ Since Fedora is kinda bloated, better choose **1024 MB** for RAM. With lower val
     <figcaption>For Fedora, you need 1024 MB RAM at minimum.</figcaption>
 </figure>
 
-Use the `qcow2` storage file you created above.
+For storage, we'll be using the `qcow2` image file we created above.
 
 <figure>
     <img src="{{ site.baseurl }}/assets/{{ page.slug }}/1-4-storage.png" alt="Step 4: Select the storage image">
@@ -77,7 +77,7 @@ This is optional since you can also do this later.
     <figcaption>Check “Customize configuration before install” to configure/remove hardware.</figcaption>
 </figure>
 
-Next, start up the VM and step through the installation process. This is straightforward for Fedora since everything is GUI-based. We're not installing Arch or Gentoo, after all. As for all the settings (user name, password, root password) just put "vagrant" everywhere.
+Next, we simply start up the VM and step through the installation process. This is straightforward for Fedora since everything is GUI-based. We're not installing Arch or Gentoo, after all. As for all the settings (user name, password, root password) let's just put "vagrant" everywhere.
 
 <figure>
     <img src="{{ site.baseurl }}/assets/{{ page.slug }}/1-useradd.png" alt="Adding the “vagrant” user">
@@ -96,7 +96,7 @@ Yes, since we're building our own box it would be much safer to not follow the d
 
 > This user (vagrant) should be setup with the [insecure keypair](https://github.com/hashicorp/vagrant/tree/master/keys) that Vagrant uses as a default to attempt to SSH.
 
-Let's do this! Download the key files on your host and copy them over to your VM.
+Let's do this! Downloading the key files and copying them over to the VM.
 
 ```
 $ wget https://raw.githubusercontent.com/hashicorp/vagrant/master/keys/vagrant
@@ -121,7 +121,7 @@ $ chmod 0600 vagrant
 $ ssh -i vagrant vagrant@192.168.122.233
 ```
 
-Hopefully, we're now connected. Let's edit sudo's configuration by first changing to root, then opening the config file with the `visudo` helper command.
+Hopefully, we're now connected. Let's edit sudo's configuration by first switching to root, then opening the config file with the `visudo` helper command.
 
 ```
 $ su
@@ -129,7 +129,7 @@ Password:
 $ visudo
 ```
 
-I hope you're proficient with Vim. :wink: At the end of the just opened sudo configuration file write:
+I hope you're proficient with Vim. :wink: Adding this to the end of the just opened sudo configuration file:
 
 ```
 vagrant ALL=(ALL) NOPASSWD: ALL
@@ -141,13 +141,13 @@ This is optional, but recommended in the [documentation](https://www.vagrantup.c
 
 > In order to keep SSH speedy even when your machine or the Vagrant machine is not connected to the internet, set the `UseDNS` configuration to `no` in the SSH server configuration.
 
-You can do this in the SSH server's configuration:
+This is just a minor edit in the SSH server's configuration file.
 
 ```
 $ vi /etc/ssh/sshd_config
 ```
 
-At last you can disconnect and shut down the VM.
+At last, disconnect and shut down the VM. This is also the last change to remove unnecessary hardware from the VM.
 
 ## Step 3: Creating the Box
 
@@ -178,9 +178,9 @@ Total bytes written: 2438277120 (2.3GiB, 32MiB/s)
 ==>   'vagrant box add fedora-server-29.box --name fedora-server-29'
 ```
 
-Ta-da! Your newly created `fedora-server-29.box` is ready! Let's try it out!
+Ta-da! Our newly created `fedora-server-29.box` is ready! Let's try it out!
 
-Create a new folder somewhere, add and start your box:
+After creating a new folder somewhere, add and start the box:
 
 ```
 $ vagrant box add leyhline/fedora-server-29 fedora-server-29.box
@@ -197,21 +197,23 @@ Hello, vagrant!
 
 <figure>
     <img src="{{ site.baseurl }}/assets/{{ page.slug }}/virt-manager-overview.png" alt="Vagrant Box in virt-manager">
-    <figcaption>We can also see libvirt Vagrant boxes in virt-manager.</figcaption>
+    <figcaption>Libvirt Vagrant boxes can be seen in virt-manager, too.</figcaption>
 </figure>
+
+I took the liberty of uploading our box to Vagrant Cloud: [leyhline/fedora-server-29](https://app.vagrantup.com/leyhline/boxes/fedora-server-29)
 
 ### Side Node: Synced folders with NFS
 
-By default, Vagrant will share the current directory with the guest VM using NFS (Network File System). But if you're running a firewall this will most likely fail. Now, we've got three options:
+By default, Vagrant will share the current directory with the guest VM using NFS (Network File System). But when running a firewall this will most likely fail. Now, we've got three options:
 
 1. Adjusting the firewall: There is some information on the [Fedora Developer Portal](https://developer.fedoraproject.org/tools/vagrant/vagrant-nfs.html) on adding rules with `firewall-cmd`.
-2. Using a different protocol: Instead of NFS, you can also [use VirtFS or rsync](https://github.com/vagrant-libvirt/vagrant-libvirt#synced-folders).
-3. Disabling synced folders altogether: This is my choice since I don't need synced folders by default. Just add the corresponding option to your `Vagrantfile`:
+2. Using a different protocol: Instead of NFS, we can also [use VirtFS or rsync](https://github.com/vagrant-libvirt/vagrant-libvirt#synced-folders).
+3. Disabling synced folders altogether: This is my choice since I currently don't need synced folders. Just adding the corresponding option to the `Vagrantfile`:
 
 ```
 config.vm.synced_folder ".", "/vagrant", disabled: true
 ```
 
-I copied this line directly [from Vagrant's configuration](https://www.vagrantup.com/docs/synced-folders/basic_usage.html#disabling).
+This is directly [from Vagrant's documentation](https://www.vagrantup.com/docs/synced-folders/basic_usage.html#disabling).
 
 ## Afterword:
